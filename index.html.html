@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Only Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        #message {
+            margin-top: 30px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Login Page</h1>
+    
+    <input type="password" id="passwordInput" placeholder="Enter password">
+    <br>
+    <button onclick="checkPassword()">Submit</button>
+
+    <div id="message"></div>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById("passwordInput").value;
+            const messageDiv = document.getElementById("message");
+
+            if (input === "mnmb") {
+                messageDiv.textContent = "VALID";
+                messageDiv.style.color = "green";
+            } else {
+                messageDiv.textContent = "INVALID";
+                messageDiv.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
